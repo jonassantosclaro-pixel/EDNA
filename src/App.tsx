@@ -16,7 +16,8 @@ import {
   MessageCircle,
   Menu,
   X,
-  ChevronRight
+  ChevronRight,
+  Star
 } from "lucide-react";
 import { useState } from "react";
 
@@ -123,25 +124,31 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:grid lg:grid-cols-2 gap-16 items-center">
             <motion.div {...fadeIn}>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="space-y-4">
-                  <img 
-                    src="https://i.postimg.cc/tTnshW3P/Whats-App-Image-2026-04-25-at-12-51-47-(4).jpg" 
-                    alt="Psicóloga Adna Juliana em atendimento" 
-                    className="rounded-2xl hover:grayscale transition-all duration-700 shadow-xl w-full aspect-[3/4] object-cover border-2 border-brand-gold/10"
-                  />
+              <div className="flex flex-col gap-4 max-w-lg mx-auto lg:mx-0">
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="group overflow-hidden rounded-2xl border-2 border-brand-gold/10 shadow-xl transition-all duration-500 hover:shadow-brand-gold/20">
+                    <img 
+                      src="https://i.postimg.cc/tTnshW3P/Whats-App-Image-2026-04-25-at-12-51-47-(4).jpg" 
+                      alt="Psicóloga Adna Juliana em atendimento" 
+                      className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="group overflow-hidden rounded-2xl border-2 border-brand-gold/10 shadow-xl transition-all duration-500 hover:shadow-brand-gold/20">
+                    <img 
+                      src="https://i.postimg.cc/tTnshW3W/Whats-App-Image-2026-04-25-at-12-51-47-(6).jpg" 
+                      alt="Adna Juliana Profissional" 
+                      className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105"
+                    />
+                  </div>
                 </div>
-                <div className="space-y-4 pt-12">
-                  <img 
-                    src="https://i.postimg.cc/tTnshW3W/Whats-App-Image-2026-04-25-at-12-51-47-(6).jpg" 
-                    alt="Adna Juliana Profissional" 
-                    className="rounded-2xl hover:grayscale transition-all duration-700 shadow-xl w-full aspect-[3/4] object-cover border-2 border-brand-gold/10"
-                  />
-                  <img 
-                    src="https://i.postimg.cc/wvR1hLXN/Whats-App-Image-2026-04-25-at-12-51-47-(5).jpg" 
-                    alt="Adna Juliana" 
-                    className="rounded-2xl hover:grayscale transition-all duration-700 shadow-xl w-full aspect-square object-cover border-2 border-brand-gold/10"
-                  />
+                <div className="flex justify-center">
+                  <div className="group overflow-hidden rounded-2xl border-2 border-brand-gold/10 shadow-xl transition-all duration-500 hover:shadow-brand-gold/20 w-1/2">
+                    <img 
+                      src="https://i.postimg.cc/wvR1hLXN/Whats-App-Image-2026-04-25-at-12-51-47-(5).jpg" 
+                      alt="Adna Juliana" 
+                      className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105"
+                    />
+                  </div>
                 </div>
               </div>
             </motion.div>
@@ -271,13 +278,13 @@ export default function App() {
               { 
                 title: "Avaliação Neuropsicológica", 
                 desc: "Investigação detalhada das funções cognitivas e comportamentais.",
-                details: "O processo envolve anamnese clínica e aplicação de testes e escalas científicas rigorosas (TDAH, TEA, Borderline). As avaliações podem durar até 7 sessões, mas esse prazo pode ser estendido dependendo da complexidade do caso e dos testes específicos utilizados para garantir um diagnóstico preciso.",
+                details: "O processo envolve anamnese clínica e aplicação de testes e escalas científicas rigorosas (TDAH, TEA, Borderline, entre outros). Emissão de Laudo neuropsicológico para fins acadêmicos, jurídicos e para autoconhecimento. As avaliações podem durar até 7 sessões, mas esse prazo pode ser estendido dependendo da complexidade do caso e dos testes neuro utilizados para garantir um diagnóstico preciso.",
                 icon: <Brain className="w-6 h-6" />
               },
               { 
                 title: "Terapia Individual", 
                 desc: "Sessões dinâmicas com foco em ansiedade, depressão e autoconhecimento.",
-                details: "Trabalho fundamentado em TCC e DBT. Cada sessão inclui psicoeducação sobre pensamentos e comportamentos, verificação constante de humor e entrega de exercícios práticos (home tasks) para fortalecer o progresso entre os encontros semanais.",
+                details: "Trabalho fundamentado em TCC e DBT. Dentro das estratégias, realizamos a verificação do humor e trabalhamos com metas da semana. O cuidado estende-se para além da sessão com acompanhamento pré e pós-consultas, garantindo um monitoramento constante de todo o processo do paciente.",
                 icon: <Users className="w-6 h-6" />
               },
               { 
@@ -308,6 +315,81 @@ export default function App() {
                 </div>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Process Section - Detailed Methodology */}
+      <section id="processo" className="py-24 bg-brand-dark text-white relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-brand-gold font-medium tracking-widest text-sm uppercase mb-4">Metodologia Detalhada</h2>
+              <h3 className="text-3xl md:text-5xl font-serif mb-12">Como funciona a <span className="text-brand-gold italic">Avaliação Neuropsicológica</span></h3>
+              
+              <div className="space-y-10">
+                {[
+                  { 
+                    icon: <Users className="w-6 h-6" />, 
+                    title: "1. Entrevista Individual e Familiar", 
+                    text: "Coleta detalhada de informações sobre o histórico de desenvolvimento e sintomas." 
+                  },
+                  { 
+                    icon: <Search className="w-6 h-6" />, 
+                    title: "2. Aplicação de Testes e Escalas", 
+                    text: "Utilização de instrumentos científicos para avaliar atenção, memória e comportamento." 
+                  },
+                  { 
+                    icon: <FileText className="w-6 h-6" />, 
+                    title: "3. Laudo Incluso e Encaminhamento", 
+                    text: "Emissão de relatório técnico completo e diretrizes para os próximos passos." 
+                  }
+                ].map((step, i) => (
+                  <motion.div 
+                    key={i}
+                    {...fadeIn}
+                    transition={{ delay: i * 0.2 }}
+                    className="flex gap-8 group"
+                  >
+                    <div className="flex-shrink-0 w-14 h-14 rounded-2xl border-2 border-brand-gold/30 flex items-center justify-center text-brand-gold group-hover:bg-brand-gold group-hover:text-brand-dark transition-all duration-300">
+                      {step.icon}
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-serif mb-2 text-brand-gold">{step.title}</h4>
+                      <p className="text-brand-light/60 text-sm leading-relaxed max-w-md">{step.text}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+
+              <div className="mt-16">
+                <a 
+                  href={WHATSAPP_LINK}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center px-10 py-5 gold-gradient text-white rounded-2xl font-bold text-lg hover:brightness-110 shadow-xl shadow-brand-gold/20 transition-all duration-300 group"
+                >
+                  Agendar Avaliação Agora
+                  <ChevronRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </a>
+              </div>
+            </div>
+            
+            <div className="relative">
+              <div className="aspect-square bg-gradient-to-br from-brand-gold/10 to-transparent rounded-full flex items-center justify-center p-12 text-center border border-brand-gold/5">
+                <div className="max-w-xs">
+                  <span className="text-brand-gold text-xs uppercase tracking-widest font-bold">Objetivo Final</span>
+                  <p className="text-3xl md:text-4xl font-serif mt-6 mb-4 italic text-white">Entenda seu Perfil Cognitivo</p>
+                  <p className="text-brand-light/40 text-sm">Transforme diagnóstico em uma ferramenta poderosa de evolução pessoal.</p>
+                </div>
+              </div>
+              {/* Floating detail */}
+              <div className="absolute top-1/2 -translate-y-1/2 -right-8 p-10 border border-brand-gold/30 rounded-[32px] bg-white/5 backdrop-blur-xl shadow-2xl">
+                <Clock className="w-10 h-10 text-brand-gold mb-6" />
+                <p className="text-xl font-serif text-white mb-2 leading-tight">Sessão de Devolutiva</p>
+                <p className="text-[11px] text-brand-gold uppercase tracking-[0.2em] font-bold italic">Ética e Acolhedora</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -394,68 +476,44 @@ export default function App() {
         </div>
       </section>
 
-      {/* Process Section */}
-      <section id="processo" className="py-24 bg-brand-dark text-white relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-brand-primary font-medium tracking-widest text-sm uppercase mb-4">Metodologia</h2>
-              <h3 className="text-3xl md:text-4xl font-serif mb-8">Como funciona a Avaliação Remota</h3>
-              <div className="space-y-8">
-                {[
-                  { 
-                    icon: <Users className="w-6 h-6" />, 
-                    title: "1. Entrevista Individual e Familiar", 
-                    text: "Coleta detalhada de informações sobre o histórico de desenvolvimento e sintomas." 
-                  },
-                  { 
-                    icon: <Search className="w-6 h-6" />, 
-                    title: "2. Aplicação de Testes e Escalas", 
-                    text: "Utilização de instrumentos científicos para avaliar atenção, memória e comportamento." 
-                  },
-                  { 
-                    icon: <FileText className="w-6 h-6" />, 
-                    title: "3. Laudo Incluso e Encaminhamento", 
-                    text: "Emissão de relatório técnico completo e diretrizes para os próximos passos." 
-                  }
-                ].map((step, i) => (
-                  <motion.div 
-                    key={i}
-                    {...fadeIn}
-                    transition={{ delay: i * 0.2 }}
-                    className="flex gap-6"
-                  >
-                    <div className="flex-shrink-0 w-12 h-12 rounded-full border border-brand-primary/30 flex items-center justify-center text-brand-primary">
-                      {step.icon}
-                    </div>
-                    <div>
-                      <h4 className="text-lg font-serif mb-2">{step.title}</h4>
-                      <p className="text-brand-light/60 text-sm leading-relaxed">{step.text}</p>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
+      {/* Feedbacks Section */}
+      <section id="feedbacks" className="py-24 bg-white relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="mb-16">
+            <h2 className="text-brand-gold font-bold tracking-[0.3em] text-xs uppercase mb-4">Depoimentos</h2>
+            <h3 className="text-4xl md:text-5xl font-serif text-brand-dark mb-6">O que meus <span className="text-accent underline decoration-brand-gold/20 italic">Pacientes</span> dizem</h3>
+            <div className="flex justify-center gap-1 text-brand-gold mb-8">
+              {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-current" />)}
             </div>
-            
-            <div className="relative">
-              <div className="aspect-square bg-gradient-to-br from-brand-primary/10 to-transparent rounded-full flex items-center justify-center p-12 text-center">
-                <div className="max-w-xs">
-                  <span className="text-brand-primary text-xs uppercase tracking-widest">Objetivo Final</span>
-                  <p className="text-2xl font-serif mt-4 mb-2 italic">Entenda seu Perfil Cognitivo</p>
-                  <p className="text-brand-light/40 text-xs">Transforme diagnóstico em ferramenta de evolução.</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              "https://i.postimg.cc/FH9YHGZp/Captura-de-tela-2026-04-25-153400.png",
+              "https://i.postimg.cc/dVqhVnBb/Captura-de-tela-2026-04-25-153425.png",
+              "https://i.postimg.cc/CxFRxJN9/Captura-de-tela-2026-04-25-153450.png",
+              "https://i.postimg.cc/rw8Dwgj6/Captura-de-tela-2026-04-25-153509.png",
+              "https://i.postimg.cc/Gmc4mzK1/Captura-de-tela-2026-04-25-153528.png"
+            ].map((img, i) => (
+              <motion.div 
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.1 }}
+                className="bg-brand-bg p-4 rounded-3xl border border-brand-gold/10 shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                <div className="overflow-hidden rounded-2xl bg-white shadow-inner">
+                  <img 
+                    src={img} 
+                    alt={`Feedback do cliente ${i + 1}`} 
+                    className="w-full h-auto object-contain hover:scale-105 transition-transform duration-500" 
+                  />
                 </div>
-              </div>
-              {/* Floating detail */}
-              <div className="absolute top-0 right-0 p-8 border border-brand-primary/20 rounded-2xl bg-brand-dark/50 backdrop-blur-md">
-                <Clock className="w-8 h-8 text-brand-primary mb-3" />
-                <p className="text-sm font-medium">Sessão de Devolutiva</p>
-                <p className="text-[10px] text-brand-light/50 font-serif lowercase italic">Ética e Acolhedora</p>
-              </div>
-            </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
-
 
       {/* CTA Section */}
       <section className="py-20">
