@@ -124,31 +124,15 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:grid lg:grid-cols-2 gap-16 items-center">
             <motion.div {...fadeIn}>
-              <div className="flex flex-col gap-4 max-w-lg mx-auto lg:mx-0">
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="group overflow-hidden rounded-2xl border-2 border-brand-gold/10 shadow-xl transition-all duration-500 hover:shadow-brand-gold/20">
-                    <img 
-                      src="https://i.postimg.cc/tTnshW3P/Whats-App-Image-2026-04-25-at-12-51-47-(4).jpg" 
-                      alt="Psicóloga Adna Juliana em atendimento" 
-                      className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105"
-                    />
-                  </div>
-                  <div className="group overflow-hidden rounded-2xl border-2 border-brand-gold/10 shadow-xl transition-all duration-500 hover:shadow-brand-gold/20">
-                    <img 
-                      src="https://i.postimg.cc/tTnshW3W/Whats-App-Image-2026-04-25-at-12-51-47-(6).jpg" 
-                      alt="Adna Juliana Profissional" 
-                      className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105"
-                    />
-                  </div>
-                </div>
-                <div className="flex justify-center">
-                  <div className="group overflow-hidden rounded-2xl border-2 border-brand-gold/10 shadow-xl transition-all duration-500 hover:shadow-brand-gold/20 w-1/2">
-                    <img 
-                      src="https://i.postimg.cc/wvR1hLXN/Whats-App-Image-2026-04-25-at-12-51-47-(5).jpg" 
-                      alt="Adna Juliana" 
-                      className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105"
-                    />
-                  </div>
+              <div className="relative group max-w-sm mx-auto lg:mx-0">
+                <div className="absolute inset-0 bg-brand-gold/10 rounded-full blur-2xl scale-110 group-hover:bg-brand-gold/20 transition-all duration-500"></div>
+                <div className="relative overflow-hidden rounded-[32px] border-8 border-white shadow-2xl transition-all duration-500 hover:shadow-brand-gold/20">
+                  <img 
+                    src="https://i.postimg.cc/wvR1hLXN/Whats-App-Image-2026-04-25-at-12-51-47-(5).jpg" 
+                    alt="Psicóloga Adna Juliana" 
+                    className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 ring-1 ring-inset ring-brand-gold/10 rounded-[28px]"></div>
                 </div>
               </div>
             </motion.div>
@@ -318,6 +302,26 @@ export default function App() {
           </div>
         </div>
       </section>
+
+      {/* Continuation Guide */}
+      <div className="bg-white py-12 flex flex-col items-center">
+        <motion.div 
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          className="flex flex-col items-center gap-4"
+        >
+          <p className="text-brand-muted font-serif italic text-lg text-center">
+            Mais detalhes sobre o processo logo abaixo
+          </p>
+          <motion.div
+            animate={{ y: [0, 8, 0] }}
+            transition={{ duration: 2, repeat: Infinity }}
+            className="text-brand-gold"
+          >
+            <ChevronRight className="w-6 h-6 rotate-90" />
+          </motion.div>
+        </motion.div>
+      </div>
 
       {/* Process Section - Detailed Methodology */}
       <section id="processo" className="py-24 bg-brand-dark text-white relative overflow-hidden">
