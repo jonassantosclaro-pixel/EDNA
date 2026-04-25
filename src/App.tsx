@@ -383,12 +383,6 @@ export default function App() {
                   <p className="text-brand-light/40 text-sm">Transforme diagnóstico em uma ferramenta poderosa de evolução pessoal.</p>
                 </div>
               </div>
-              {/* Floating detail */}
-              <div className="absolute top-1/2 -translate-y-1/2 -right-8 p-10 border border-brand-gold/30 rounded-[32px] bg-white/5 backdrop-blur-xl shadow-2xl">
-                <Clock className="w-10 h-10 text-brand-gold mb-6" />
-                <p className="text-xl font-serif text-white mb-2 leading-tight">Sessão de Devolutiva</p>
-                <p className="text-[11px] text-brand-gold uppercase tracking-[0.2em] font-bold italic">Ética e Acolhedora</p>
-              </div>
             </div>
           </div>
         </div>
