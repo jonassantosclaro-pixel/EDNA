@@ -118,6 +118,69 @@ export default function App() {
         )}
       </nav>
 
+      {/* About Section - Moved to top as requested */}
+      <section id="sobre" className="py-24 bg-brand-bg relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="lg:grid lg:grid-cols-2 gap-16 items-center">
+            <motion.div {...fadeIn}>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-4">
+                  <img 
+                    src="https://i.postimg.cc/tTnshW3P/Whats-App-Image-2026-04-25-at-12-51-47-(4).jpg" 
+                    alt="Psicóloga Adna Juliana em atendimento" 
+                    className="rounded-2xl hover:grayscale transition-all duration-700 shadow-xl w-full aspect-[3/4] object-cover border-2 border-brand-gold/10"
+                  />
+                </div>
+                <div className="space-y-4 pt-12">
+                  <img 
+                    src="https://i.postimg.cc/tTnshW3W/Whats-App-Image-2026-04-25-at-12-51-47-(6).jpg" 
+                    alt="Adna Juliana Profissional" 
+                    className="rounded-2xl hover:grayscale transition-all duration-700 shadow-xl w-full aspect-[3/4] object-cover border-2 border-brand-gold/10"
+                  />
+                  <img 
+                    src="https://i.postimg.cc/wvR1hLXN/Whats-App-Image-2026-04-25-at-12-51-47-(5).jpg" 
+                    alt="Adna Juliana" 
+                    className="rounded-2xl hover:grayscale transition-all duration-700 shadow-xl w-full aspect-square object-cover border-2 border-brand-gold/10"
+                  />
+                </div>
+              </div>
+            </motion.div>
+            
+            <motion.div {...fadeIn} transition={{ delay: 0.3 }}>
+              <h2 className="text-brand-gold font-bold tracking-widest text-sm uppercase mb-4 flex items-center">
+                <span className="w-8 h-[1px] bg-brand-gold mr-3"></span>
+                Sobre a Doutora
+              </h2>
+              <h3 className="text-3xl md:text-5xl font-serif text-brand-dark mb-6">Unindo ciência <span className="text-accent text-4xl italic">e</span> humanidade.</h3>
+              <div className="space-y-6 text-brand-muted text-lg leading-relaxed">
+                <p>
+                  <span className="text-brand-dark font-semibold text-xl">Adna Juliana, 28 anos</span>, é psicóloga especialista em <span className="gold-accent">Terapia Cognitivo-Comportamental (TCC)</span>, com uma trajetória marcada por superação, autoconhecimento e dedicação ao cuidado emocional. Sua história pessoal despertou desde cedo uma profunda sensibilidade para compreender o comportamento humano, levando-a a encontrar na psicologia não apenas uma profissão, mas um propósito de vida.
+                </p>
+                <p>
+                  Formada pelo <span className="text-brand-dark font-medium underline decoration-brand-gold/30">Centro Universitário Estácio do Recife</span> e pós-graduada em TCC pela Faculdade Metropolitana de São Paulo, possui experiência clínica com atendimentos presenciais e online, incluindo atuação em clínicas, telemedicina e apoio emocional voluntário no CVV (Centro de Valorização da Vida).
+                </p>
+                <p>
+                  Ao longo da carreira, acompanhou casos complexos envolvendo ansiedade, depressão, síndrome do pânico e situações de vulnerabilidade emocional, sempre com foco no acolhimento e na promoção de equilíbrio psicológico.
+                </p>
+                <p>
+                  Seu trabalho é baseado em abordagens como <span className="gold-accent">TCC e DBT</span>, oferecendo terapias dinâmicas, objetivas e orientadas ao resultado. Atua com adolescentes, adultos, casais e famílias, ajudando seus pacientes a desenvolverem autoconhecimento, controle emocional e relações mais saudáveis.
+                </p>
+                <div className="pt-6 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div className="p-4 border border-brand-gold/20 rounded-xl bg-brand-light/30 shadow-sm">
+                    <p className="text-brand-primary font-bold">Registro Profissional</p>
+                    <p className="text-base font-serif italic">CRP 02/26892</p>
+                  </div>
+                  <div className="p-4 border border-brand-gold/20 rounded-xl bg-brand-light/30 shadow-sm">
+                    <p className="text-brand-primary font-bold">Especialidade</p>
+                    <p className="text-base font-serif italic">Neuropsicologia & TCC</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Hero Section */}
       <section id="inicio" className="relative pt-32 pb-20 overflow-hidden lg:pt-48 lg:pb-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -126,50 +189,44 @@ export default function App() {
               <h2 className="text-brand-primary font-medium tracking-[0.2em] text-sm uppercase mb-4">
                 Especialista em Neuropsicologia
               </h2>
-              <h1 className="text-4xl md:text-6xl font-serif text-brand-dark leading-[1.1] mb-6">
-                Compreensão <span className="text-accent italic">Cognitiva</span> e <span className="text-brand-primary italic">Emocional</span> para sua Saúde Mental.
+              <h1 className="text-5xl md:text-7xl font-serif text-brand-dark leading-[1.1] mb-8">
+                Sua Mente em <span className="text-gold">Equilíbrio</span>, sua Vida com <span className="text-accent italic">Propósito</span>.
               </h1>
-              <p className="text-lg text-brand-muted mb-8 max-w-lg leading-relaxed">
-                Realizo testes e avaliações neuropsicológicas completas para TDAH, TEA, Borderline e outros quadros clínicos. Atendimento ético, personalizado e acolhedor.
+              <p className="text-xl text-brand-muted mb-10 max-w-lg leading-relaxed">
+                Acolhimento ético e suporte especializado para quem busca clareza emocional e diagnóstico preciso.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-5">
                 <a 
                   href={WHATSAPP_LINK}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-brand-primary text-white rounded-full font-medium hover:opacity-90 shadow-lg shadow-brand-primary/20 transition-all duration-300 group"
+                  className="inline-flex items-center justify-center px-10 py-5 bg-brand-primary text-white rounded-2xl font-bold hover:brightness-110 shadow-xl shadow-brand-primary/20 transition-all duration-300 group"
                 >
-                  Agende sua Avaliação
-                  <ChevronRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  Agendar minha Consulta
+                  <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </a>
-                <div className="flex items-center px-6 py-4 rounded-full border border-brand-primary/20 bg-brand-light">
-                  <Phone className="w-5 h-5 text-brand-primary mr-3" />
-                  <span className="text-sm font-medium text-brand-dark">(81) 98251-9461</span>
-                </div>
               </div>
             </motion.div>
 
             <motion.div 
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8 }}
-              className="mt-12 lg:mt-0 relative"
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              className="mt-16 lg:mt-0 relative flex justify-center"
             >
-              <div className="aspect-[4/5] rounded-[40px] overflow-hidden shadow-2xl relative z-10">
-                <img 
-                  src="https://i.postimg.cc/j5nDzPHw/Whats-App-Image-2026-04-25-at-12-51-47-(1).jpg" 
-                  alt="Psicóloga Adna Juliana" 
-                  className="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/40 to-transparent"></div>
-              </div>
-              {/* Decorative elements */}
-              <div className="absolute -top-6 -right-6 w-32 h-32 border-2 border-brand-primary/20 rounded-full"></div>
-              <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-brand-primary/5 rounded-full blur-3xl"></div>
-              
-              <div className="absolute bottom-10 right-10 bg-white/95 backdrop-blur-md p-6 rounded-2xl shadow-xl z-20 border border-brand-border">
-                <p className="text-brand-primary font-bold text-lg">CRP 02/26892</p>
-                <p className="text-brand-muted text-xs uppercase tracking-widest font-medium">Registro Profissional</p>
+              <div className="relative w-full max-w-[500px]">
+                <div className="absolute inset-0 bg-brand-gold/10 rounded-full blur-3xl scale-110"></div>
+                <div className="aspect-[4/5] rounded-[40px] overflow-hidden shadow-2xl relative z-10 border-8 border-white ring-1 ring-brand-gold/10">
+                  <img 
+                    src="https://i.postimg.cc/j5nDzPHw/Whats-App-Image-2026-04-25-at-12-51-47-(1).jpg" 
+                    alt="Psicóloga Adna Juliana" 
+                    className="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/40 via-transparent to-transparent"></div>
+                  <div className="absolute bottom-10 left-10 right-10 p-6 bg-white/90 backdrop-blur-md rounded-2xl border border-brand-gold/20 shadow-lg">
+                    <p className="text-brand-gold font-bold text-sm mb-1 italic">Propósito de Vida</p>
+                    <p className="text-brand-dark font-medium lowercase italic">Guiando você para ser dono(a) de si.</p>
+                  </div>
+                </div>
               </div>
             </motion.div>
           </div>
@@ -177,81 +234,162 @@ export default function App() {
       </section>
 
       {/* Stats/Highlight */}
-      <section className="bg-brand-dark py-16">
+      <section className="bg-brand-dark py-20 relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-[1px] gold-gradient opacity-30"></div>
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <div className="grid md:grid-cols-3 gap-12">
+          <div className="grid md:grid-cols-3 gap-16">
             <motion.div {...fadeIn}>
-              <Brain className="w-10 h-10 text-brand-primary mx-auto mb-4" />
-              <h3 className="text-white text-xl font-serif mb-2">Neuropsicologia</h3>
-              <p className="text-brand-light/60 text-sm">Avaliação detalhada das funções cognitivas.</p>
+              <Brain className="w-12 h-12 text-brand-gold mx-auto mb-6" />
+              <h3 className="text-white text-2xl font-serif mb-4">Neuropsicologia</h3>
+              <p className="text-brand-light/60 text-base leading-relaxed">Investigação profunda das funções cognitivas com base científica.</p>
             </motion.div>
             <motion.div {...fadeIn} transition={{ delay: 0.2 }}>
-              <Users className="w-10 h-10 text-brand-primary mx-auto mb-4" />
-              <h3 className="text-white text-xl font-serif mb-2">Humanização</h3>
-              <p className="text-brand-light/60 text-sm">Escuta qualificada e acolhimento ético.</p>
+              <Users className="w-12 h-12 text-brand-gold mx-auto mb-6" />
+              <h3 className="text-white text-2xl font-serif mb-4">Humanização</h3>
+              <p className="text-brand-light/60 text-base leading-relaxed">Olhar empático e escuta qualificada para cada desafio pessoal.</p>
             </motion.div>
             <motion.div {...fadeIn} transition={{ delay: 0.4 }}>
-              <MessageCircle className="w-10 h-10 text-brand-primary mx-auto mb-4" />
-              <h3 className="text-white text-xl font-serif mb-2">Remoto</h3>
-              <p className="text-brand-light/60 text-sm">Atendimento online para todo o Brasil.</p>
+              <MessageCircle className="w-12 h-12 text-brand-gold mx-auto mb-6" />
+              <h3 className="text-white text-2xl font-serif mb-4">Atendimento Online</h3>
+              <p className="text-brand-light/60 text-base leading-relaxed">Conexão segura e acolhedora de onde você estiver.</p>
             </motion.div>
           </div>
         </div>
+        <div className="absolute bottom-0 right-0 w-full h-[1px] gold-gradient opacity-30"></div>
       </section>
 
       {/* Services Section */}
-      <section id="servicos" className="py-24 bg-white">
+      <section id="servicos" className="py-24 bg-white relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-brand-primary font-medium tracking-widest text-sm uppercase mb-4">Especialidades</h2>
-            <h3 className="text-3xl md:text-4xl font-serif text-brand-dark">Avaliações Completas</h3>
+          <div className="text-center mb-20">
+            <h2 className="text-brand-gold font-bold tracking-[0.3em] text-xs uppercase mb-4">Especialidades e Atendimentos</h2>
+            <h3 className="text-4xl md:text-5xl font-serif text-brand-dark">Como Posso te <span className="text-accent underline decoration-brand-gold/20 italic">Auxiliar</span></h3>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             {[
               { 
+                title: "Avaliação Neuropsicológica", 
+                desc: "Investigação detalhada das funções cognitivas e comportamentais.",
+                details: "O processo envolve anamnese clínica e aplicação de testes e escalas científicas rigorosas (TDAH, TEA, Borderline). As avaliações podem durar até 7 sessões, mas esse prazo pode ser estendido dependendo da complexidade do caso e dos testes específicos utilizados para garantir um diagnóstico preciso.",
+                icon: <Brain className="w-6 h-6" />
+              },
+              { 
                 title: "Terapia Individual", 
-                desc: "Processo focado no desenvolvimento de estratégias para lidar com ansiedade, estresse e crescimento pessoal.",
-                icon: <Users className="w-5 h-5" />
+                desc: "Sessões dinâmicas com foco em ansiedade, depressão e autoconhecimento.",
+                details: "Trabalho fundamentado em TCC e DBT. Cada sessão inclui psicoeducação sobre pensamentos e comportamentos, verificação constante de humor e entrega de exercícios práticos (home tasks) para fortalecer o progresso entre os encontros semanais.",
+                icon: <Users className="w-6 h-6" />
               },
               { 
                 title: "Terapia de Casais", 
-                desc: "Superando obstáculos para uma relação saudável, melhorando a comunicação e o vínculo afetivo.",
-                icon: <MessageCircle className="w-5 h-5" />
-              },
-              { 
-                title: "Avaliação Neuropsicológica", 
-                desc: "Investigação detalhada (TDAH, TEA, Borderline) com laudo técnico e orientações precisas.",
-                icon: <Brain className="w-5 h-5" />
-              },
-              { 
-                title: "Grupo Terapêutico", 
-                desc: "Controlando a Ansiedade: 8 encontros focados em técnicas práticas para lidar com contextos ansiosos.",
-                icon: <Users className="w-5 h-5" />
+                desc: "Mediação voltada para superar obstáculos e fortalecer vínculos.",
+                details: "Focada em melhorar a comunicação e resolver conflitos recorrentes. O objetivo é ajudar o casal a encontrar um equilíbrio saudável, compreendendo as realidades individuais para construir uma relação mais autêntica e conectada.",
+                icon: <MessageCircle className="w-6 h-6" />
               }
             ].map((service, i) => (
               <motion.div 
                 key={i}
                 whileHover={{ y: -10 }}
-                className="p-8 rounded-3xl border border-brand-border bg-brand-bg/50 hover:bg-white hover:shadow-xl transition-all duration-300"
+                className="p-10 rounded-[32px] border border-brand-border bg-brand-bg/30 hover:bg-white hover:shadow-2xl transition-all duration-500 group relative border-t-4 border-t-transparent hover:border-t-brand-gold"
               >
-                <div className="w-12 h-12 bg-brand-light text-brand-primary rounded-xl flex items-center justify-center mb-6">
+                <div className="w-14 h-14 bg-brand-light text-brand-primary rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
                   {service.icon}
                 </div>
-                <h4 className="text-xl font-serif text-brand-dark mb-4">{service.title}</h4>
-                <p className="text-brand-muted text-sm leading-relaxed mb-6">{service.desc}</p>
-                <ul className="space-y-2">
-                  <li className="flex items-center text-xs text-brand-muted">
-                    <CheckCircle2 className="w-3 h-3 text-brand-primary mr-2" />
-                    Atendimento Humanizado
-                  </li>
-                  <li className="flex items-center text-xs text-brand-muted">
-                    <CheckCircle2 className="w-3 h-3 text-brand-primary mr-2" />
-                    Ética Profissional
-                  </li>
-                </ul>
+                <h4 className="text-2xl font-serif text-brand-dark mb-4">{service.title}</h4>
+                <p className="text-brand-gold font-bold text-xs uppercase tracking-widest mb-6 block border-b border-brand-gold/10 pb-4">{service.desc}</p>
+                <p className="text-brand-muted text-sm leading-relaxed mb-8 italic font-light">
+                  {service.details}
+                </p>
+                <div className="pt-6 border-t border-brand-border flex items-center justify-between">
+                  <span className="text-[10px] text-brand-gold font-bold uppercase tracking-widest">Atendimento Ético</span>
+                  <a href={WHATSAPP_LINK} className="text-brand-primary hover:text-brand-gold transition-colors">
+                    <ChevronRight className="w-5 h-5" />
+                  </a>
+                </div>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Ebooks Section */}
+      <section id="ebooks" className="py-24 bg-brand-bg">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-20">
+            <h2 className="text-brand-gold font-bold tracking-[0.3em] text-xs uppercase mb-4">Materiais Terapêuticos</h2>
+            <h3 className="text-4xl md:text-5xl font-serif text-brand-dark">Ebooks <span className="text-accent underline decoration-brand-gold/20 italic">& Suporte</span></h3>
+            <p className="mt-6 text-brand-muted max-w-2xl mx-auto text-lg italic">
+              Desenvolvidos para oferecer ferramentas práticas e suporte imediato no seu cotidiano.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12 lg:gap-16">
+            {/* Ebook 1 */}
+            <motion.div 
+              {...fadeIn}
+              className="group"
+            >
+              <div className="flex flex-col lg:flex-row gap-8 items-start bg-white p-8 rounded-[40px] shadow-xl border border-brand-border hover:shadow-2xl transition-all duration-500">
+                <div className="w-full lg:w-1/2 aspect-[3/4] rounded-2xl overflow-hidden shadow-lg group-hover:scale-[1.02] transition-transform duration-500">
+                  <img 
+                    src="https://i.postimg.cc/4Nw9trmJ/IMG-9039-JPG.jpg" 
+                    alt="Capa Ebook Autocuidado" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="w-full lg:w-1/2 space-y-4">
+                  <h4 className="text-2xl font-serif text-brand-dark">Caderno de Exercícios: Equilíbrio Emocional</h4>
+                  <p className="text-brand-muted text-sm leading-relaxed line-clamp-6 lg:line-clamp-none italic">
+                    Este caderno oferece um suporte emocional prático para quem busca equilíbrio, sendo ideal para quem ainda não iniciou um processo formal. Com 46 estratégias fundamentais, foca na regulação emocional através de mindfulness, reestruturação cognitiva e escrita terapêutica.
+                  </p>
+                  <div className="pt-4">
+                    <a 
+                      href={WHATSAPP_LINK}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center justify-center w-full py-4 gold-gradient text-white rounded-2xl font-bold hover:brightness-110 shadow-lg shadow-brand-gold/20 transition-all duration-300"
+                    >
+                      Quero adquirir este Ebook
+                      <Phone className="ml-2 w-4 h-4" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Ebook 2 */}
+            <motion.div 
+              {...fadeIn}
+              transition={{ delay: 0.2 }}
+              className="group"
+            >
+              <div className="flex flex-col lg:flex-row gap-8 items-start bg-white p-8 rounded-[40px] shadow-xl border border-brand-border hover:shadow-2xl transition-all duration-500">
+                <div className="w-full lg:w-1/2 aspect-[3/4] rounded-2xl overflow-hidden shadow-lg group-hover:scale-[1.02] transition-transform duration-500">
+                  <img 
+                    src="https://i.postimg.cc/d3NJQmtj/IMG-9029.png" 
+                    alt="Capa Ebook Neurociência" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="w-full lg:w-1/2 space-y-4">
+                  <h4 className="text-2xl font-serif text-brand-dark">Guia Estratégico: Clareza e Ação</h4>
+                  <p className="text-brand-muted text-sm leading-relaxed line-clamp-6 lg:line-clamp-none italic">
+                    Focado em neurociência comportamental para superar a procrastinação e desorganização. Com 46 exercícios práticos, oferece suporte imediato para transformar intenções em ações reais, organizando a mente e otimizando a produtividade diária.
+                  </p>
+                  <div className="pt-4">
+                    <a 
+                      href={WHATSAPP_LINK}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center justify-center w-full py-4 gold-gradient text-white rounded-2xl font-bold hover:brightness-110 shadow-lg shadow-brand-gold/20 transition-all duration-300"
+                    >
+                      Quero adquirir este Ebook
+                      <Phone className="ml-2 w-4 h-4" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -318,84 +456,36 @@ export default function App() {
         </div>
       </section>
 
-      {/* About Section */}
-      <section id="sobre" className="py-24 bg-brand-bg">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="lg:grid lg:grid-cols-2 gap-16 items-center">
-            <motion.div {...fadeIn}>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="space-y-4">
-                  <img 
-                    src="https://i.postimg.cc/tTnshW3P/Whats-App-Image-2026-04-25-at-12-51-47-(4).jpg" 
-                    alt="Psicóloga Adna Juliana em atendimento" 
-                    className="rounded-2xl hover:grayscale transition-all duration-700 shadow-xl w-full aspect-[3/4] object-cover"
-                  />
-                </div>
-                <div className="space-y-4 pt-12">
-                  <img 
-                    src="https://i.postimg.cc/tTnshW3W/Whats-App-Image-2026-04-25-at-12-51-47-(6).jpg" 
-                    alt="Adna Juliana Profissional" 
-                    className="rounded-2xl hover:grayscale transition-all duration-700 shadow-xl w-full aspect-[3/4] object-cover"
-                  />
-                  <img 
-                    src="https://i.postimg.cc/wvR1hLXN/Whats-App-Image-2026-04-25-at-12-51-47-(5).jpg" 
-                    alt="Adna Juliana" 
-                    className="rounded-2xl hover:grayscale transition-all duration-700 shadow-xl w-full aspect-square object-cover"
-                  />
-                </div>
-              </div>
-            </motion.div>
-            
-            <motion.div {...fadeIn} transition={{ delay: 0.3 }}>
-              <h2 className="text-brand-primary font-medium tracking-widest text-sm uppercase mb-4">Sobre Adna Juliana</h2>
-              <h3 className="text-3xl md:text-5xl font-serif text-brand-dark mb-6">Unindo ciência <span className="text-accent text-4xl">e</span> humanidade.</h3>
-              <div className="space-y-6 text-brand-muted text-lg leading-relaxed">
-                <p>
-                  Adna Juliana é uma renomada psicóloga com uma vasta experiência na área da saúde mental. Nascida em Recife, ela sempre teve uma paixão pelo estudo da mente humana e um profundo desejo de ajudar os outros a superar seus desafios emocionais.
-                </p>
-                <p>
-                  Dedica-se aos estudos e obteve seu diploma em Psicologia pela universidade Estácio de Sá. Durante sua formação, destacou-se em habilidades clínicas e pesquisa, conquistando reconhecimento por seu comprometimento e paixão pela área.
-                </p>
-                <p>
-                  Ao longo de sua carreira, trabalhou em clínicas, hospitais e instituições de saúde mental, desenvolvendo uma reputação sólida como profissional compassiva, empática e altamente competente, capaz de estabelecer uma conexão genuína com seus pacientes.
-                </p>
-                <div className="pt-6 grid grid-cols-2 gap-6">
-                  <div className="p-4 border border-brand-border rounded-xl bg-brand-light/20">
-                    <p className="text-brand-primary font-bold">Registro Ativo</p>
-                    <p className="text-sm">CRP 02/26892</p>
-                  </div>
-                  <div className="p-4 border border-brand-border rounded-xl bg-brand-light/20">
-                    <p className="text-brand-primary font-bold">Especialista</p>
-                    <p className="text-sm">Neuropsicologia</p>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className="py-20">
         <div className="max-w-5xl mx-auto px-4">
-          <div className="brand-gradient p-1 rounded-[40px] shadow-2xl">
-            <div className="bg-brand-dark p-12 md:p-20 rounded-[38px] text-center">
-              <h3 className="text-3xl md:text-5xl font-serif text-white mb-6">Pronto para iniciar sua jornada?</h3>
-              <p className="text-brand-light/70 text-lg mb-10 max-w-xl mx-auto">
-                Agende sua avaliação neuropsicológica agora e receba o suporte especializado que sua saúde mental merece.
+          <div className="gold-gradient p-0.5 rounded-[48px] shadow-2xl shadow-brand-gold/20">
+            <div className="bg-brand-dark p-12 md:p-20 rounded-[47px] text-center">
+              <h3 className="text-3xl md:text-5xl font-serif text-white mb-6">Comece sua <span className="text-gold">Jornada</span> com a Drª Adna</h3>
+              <p className="text-brand-light/70 text-lg mb-10 max-w-xl mx-auto italic font-light">
+                "Minha missão é guiar você no processo de se tornar dono(a) de si, desenvolvendo uma vida com mais clareza, autenticidade e propósito."
               </p>
-              <a 
-                href={WHATSAPP_LINK}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center justify-center px-10 py-5 bg-white text-brand-dark rounded-full font-bold text-lg hover:bg-brand-light hover:text-brand-primary transition-all duration-300 shadow-xl"
-              >
-                Agende pelo WhatsApp
-                <Phone className="ml-3 w-5 h-5" />
-              </a>
-              <p className="mt-8 text-brand-light/40 text-xs uppercase tracking-widest">
-                Avaliação ética e personalizada para sua saúde mental.
-              </p>
+              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <a 
+                  href={WHATSAPP_LINK}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center justify-center px-10 py-5 gold-gradient text-white rounded-2xl font-bold text-lg hover:brightness-110 shadow-lg transition-all duration-300"
+                >
+                  Falar no WhatsApp
+                  <Phone className="ml-3 w-5 h-5" />
+                </a>
+                <a 
+                  href={INSTAGRAM_LINK}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center justify-center px-10 py-5 border-2 border-brand-gold/30 text-brand-gold rounded-2xl font-bold text-lg hover:bg-brand-gold/10 transition-all duration-300"
+                >
+                  Seguir no Instagram
+                  <Instagram className="ml-3 w-5 h-5" />
+                </a>
+              </div>
             </div>
           </div>
         </div>
