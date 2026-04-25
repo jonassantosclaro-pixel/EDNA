@@ -187,15 +187,6 @@ export default function App() {
                 Acolhimento ético e suporte especializado para quem busca clareza emocional e diagnóstico preciso.
               </p>
               <div className="flex flex-col sm:flex-row gap-5">
-                <a 
-                  href={WHATSAPP_LINK}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center justify-center px-10 py-5 bg-brand-primary text-white rounded-2xl font-bold hover:brightness-110 shadow-xl shadow-brand-primary/20 transition-all duration-300 group"
-                >
-                  Agendar minha Consulta
-                  <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </a>
               </div>
             </motion.div>
 
@@ -208,17 +199,34 @@ export default function App() {
                 <div className="absolute inset-0 bg-brand-gold/10 rounded-full blur-3xl scale-110"></div>
                 <div className="aspect-[4/5] rounded-[40px] overflow-hidden shadow-2xl relative z-10 border-8 border-white ring-1 ring-brand-gold/10">
                   <img 
-                    src="https://i.postimg.cc/j5nDzPHw/Whats-App-Image-2026-04-25-at-12-51-47-(1).jpg" 
+                    src="https://i.postimg.cc/tTnshW3P/Whats-App-Image-2026-04-25-at-12-51-47-(4).jpg" 
                     alt="Psicóloga Adna Juliana" 
-                    className="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700"
+                    className="w-full h-full object-cover transition-all duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/40 via-transparent to-transparent"></div>
-                  <div className="absolute bottom-10 left-10 right-10 p-6 bg-white/90 backdrop-blur-md rounded-2xl border border-brand-gold/20 shadow-lg">
-                    <p className="text-brand-gold font-bold text-sm mb-1 italic">Propósito de Vida</p>
-                    <p className="text-brand-dark font-medium lowercase italic">Guiando você para ser dono(a) de si.</p>
-                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/20 via-transparent to-transparent"></div>
                 </div>
               </div>
+            </motion.div>
+          </div>
+
+          {/* Continuation Guide */}
+          <div className="mt-16 flex flex-col items-center">
+            <motion.div 
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              className="flex flex-col items-center gap-4"
+            >
+              <div className="w-12 h-[1px] bg-brand-gold/20 mb-2"></div>
+              <p className="text-brand-muted font-serif italic text-lg text-center max-w-2xl px-4 leading-relaxed text-brand-dark/80">
+                “Permita-se iniciar esse processo de transformação, continue para ter mais detalhes sobre como posso te ajudar no seu processo de evolução”
+              </p>
+              <motion.div
+                animate={{ y: [0, 8, 0] }}
+                transition={{ duration: 2, repeat: Infinity }}
+                className="text-brand-gold mt-2 flex flex-col items-center"
+              >
+                <ChevronRight className="w-8 h-8 rotate-90 opacity-50" />
+              </motion.div>
             </motion.div>
           </div>
         </div>
@@ -302,26 +310,6 @@ export default function App() {
           </div>
         </div>
       </section>
-
-      {/* Continuation Guide */}
-      <div className="bg-white py-12 flex flex-col items-center">
-        <motion.div 
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          className="flex flex-col items-center gap-4"
-        >
-          <p className="text-brand-muted font-serif italic text-lg text-center">
-            Mais detalhes sobre o processo logo abaixo
-          </p>
-          <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="text-brand-gold"
-          >
-            <ChevronRight className="w-6 h-6 rotate-90" />
-          </motion.div>
-        </motion.div>
-      </div>
 
       {/* Process Section - Detailed Methodology */}
       <section id="processo" className="py-24 bg-brand-dark text-white relative overflow-hidden">
